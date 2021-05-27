@@ -5,7 +5,7 @@ export const getCountries = () => async (dispatch) => {
     try {
         dispatch({ type: actionTypes.GET_COUNTRIES_REQUEST });
 
-        const { data } = await axios.get("https://travel-travel-server.herokuapp.com//api/countries");
+        const { data } = await axios.get("https://travel-travel-server.herokuapp.com/api/countries");
         dispatch({
             type: actionTypes.GET_COUNTRIES_SUCCESS,
             payload: data,
@@ -25,7 +25,7 @@ export const getCountryDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: actionTypes.GET_COUNTRIES_DETAILS_REQUEST });
 
-        const { data } = await axios.get(`https://travel-travel-server.herokuapp.com//api/countries/${id}`);
+        const { data } = await axios.get(`https://travel-travel-server.herokuapp.com/api/countries/${id}`);
 
         dispatch({
             type: actionTypes.GET_COUNTRIES_DETAILS_SUCCESS,
